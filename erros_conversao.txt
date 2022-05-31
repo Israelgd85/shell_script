@@ -1,0 +1,5 @@
+conversao-jpg-png.sh: 6: cd: can't cd to imagens-livros1
+ls: cannot access '*.jpg': No such file or directory
+convert-im6.q16hdri: unable to open image `.jpg': No such file or directory @ error/blob.c/OpenBlob/2924.
+convert-im6.q16hdri: no decode delegate for this image format `' @ error/constitute.c/ReadImage/575.
+convert-im6.q16hdri: no images defined `png/.png' @ error/convert.c/ConvertImageCommand/3229.

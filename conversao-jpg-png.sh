@@ -3,7 +3,7 @@
 
 converte_imagem(){
 
-cd imagens-livros1
+cd imagens-livros
 
 # Verifica se o dir png existe
 if [ ! -d png ]
@@ -21,7 +21,7 @@ do
 done
 }
 
-converte_imagem
+converte_imagem 2> erros_conversao.txt
 
 if [ $? -eq 0 ]
 then   
