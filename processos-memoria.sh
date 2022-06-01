@@ -16,17 +16,19 @@ for pid in $processos
 do
 	#Informa o nome do processo e salva na variavel
 	nome_processo=$(ps -p $pid -o comm=)
+
+	#Adiciona data e hora na linha do processo
 	echo -n $(date +%F,%T,) >> log/$nome_processo.log
 
 	#Informa o uso de mem do processo em KB
 	tamanho_processo=$(ps -p $pid -o size | grep [0-9])
 	
 	#Converte tamanho_processo de KB para BM
-	echo "$(bc <<< "scale=2;$tamanho_processo/1024) MB" >> log/$nome_processo.lo
+	echo "$(bc <<< "scale=2;$tamanho_processo/1024") MB" >> log/$nome_processo.lo
 done
 }
 
-prcessos_memoria
+processos_memoria
 
 
 #Testa a execução da função
