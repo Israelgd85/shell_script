@@ -14,7 +14,7 @@ processos=$(ps -e -o pid --sort -size | head -n 11 | grep [0-9])
 
 for pid in $processos
 do
-	#Iforma o nome do processo e salva na variavel
+	#Informa o nome do processo e salva na variavel
 	nome_processo=$(ps -p $pid -o comm=)
 	echo -n $(date +%F,%T,) >> log/$nome_processo.log
 
