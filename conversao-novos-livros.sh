@@ -12,7 +12,7 @@ varrer_diretorio(){
 	for arquivo in *
 	do
 		local caminho_arquivo=$(find /LABS/shell_script/scripts-I/imagens-novos-livros -name $arquivo)
-		if [ if -d $arquivo ]
+		if [ -d $caminho_arquivo ]
 		then
 			varrer_diretorio $caminho_arquivo
 		else
