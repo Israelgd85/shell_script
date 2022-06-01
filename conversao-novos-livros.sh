@@ -23,7 +23,7 @@ varrer_diretorio(){
 
 varrer_diretorio /LABS/shell_script/scripts-I/imagens-novos-livros
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then
 	echo "Conversão realizada com sucesso"
 else
