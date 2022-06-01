@@ -24,7 +24,7 @@ do
 	tamanho_processo=$(ps -p $pid -o size | grep [0-9])
 	
 	#Converte tamanho_processo de KB para BM
-	echo "$(bc <<< "scale=2;$tamanho_processo/1024") MB" >> log/$nome_processo.lo
+	echo "$(bc <<< "scale=2;$tamanho_processo/1024") MB" >> log/$nome_processo.log
 done
 }
 
