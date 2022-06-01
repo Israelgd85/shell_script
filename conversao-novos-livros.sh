@@ -3,7 +3,7 @@
 converte_imagem(){
 	local caminho_imagem=$1
 	local imagem_sem_extensao=$(ls $caminho_imagem | awk -F. '{ print $1}')
-	convert $imgagem_sem_extensao.jpg $imgagem_sem_extensao.png
+	convert $imagem_sem_extensao.jpg $imagem_sem_extensao.png
 }
 
 
