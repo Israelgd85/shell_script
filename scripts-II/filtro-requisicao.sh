@@ -3,8 +3,11 @@ cd /LABS/shell_script/scripts-II/apache-log
 
 if [ -z $1  ]
 then
-	read -p "Você esqueceu de colocar o parâmentro (GET,POST,PUT,DELETE): " requisicao
-	letra_maiuscula=$(echo $requisicao | awk '{ print toupper($1)}')
+	while [ -z $requisicao ]
+	do
+		read -p "Você esqueceu de colocar o parâmentro (GET,POST,PUT,DELETE): " requisicao
+		letra_maiuscula=$(echo $requisicao | awk '{ print toupper($1)}')
+	done
 else
 	letra_maiuscula=$(echo $requisicao | awk '{print toupper($1)}')
 fi
