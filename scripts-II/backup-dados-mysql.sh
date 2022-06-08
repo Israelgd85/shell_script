@@ -9,7 +9,7 @@ then
 	mkdir backup
 fi
 
-mysqldump -u root $1 > $CAMINHO_HOME/backup/$1.sql
+sudo mysqldump -u root $1 > $CAMINHO_HOME/backup/$1.sql
 
 if [ $? -eq 0 ]
 then
