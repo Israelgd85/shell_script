@@ -3,11 +3,12 @@
 resposta_http=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost)
 echo $resposta_http
 
-if [ resposta_http -eq 200 ]
+if [ $resposta_http -ne 200 ]
 then
-	echo "Tudo esta ok com o servidor"
-else
-	echo "Houve um problema no servidor, Tentando reinicializar"
+mail -s "Problema no servidor" israelgd85@gmail.com<<del
+Houve um problema no servidor e os usuarios pararam de ter acesso ao conteudo Web
+del
 		systemctl restart apache2
-		echo "...Servidor reinicializado"
 fi
+
+
