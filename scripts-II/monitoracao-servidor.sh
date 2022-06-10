@@ -10,5 +10,3 @@ Houve um problema no servidor e os usuarios pararam de ter acesso ao conteudo We
 del
 		systemctl restart apache2
 fi
-
-
