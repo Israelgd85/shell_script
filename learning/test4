@@ -1,0 +1,5 @@
+#!/bin/bash
+# assiging a variable value to another variable
+value1=10
+value2=$value1
+echo The result is $value2
